@@ -121,7 +121,7 @@ async def AI(app, message):
 
 
 
-@app.on_message(filters.text, group=200):
+@app.on_message(filters.message, group=200):
 async def AI_Reply(app, message):
       if is_db:
            bot_id = (await app.get_me()).id
