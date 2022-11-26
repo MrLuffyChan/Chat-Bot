@@ -1,8 +1,8 @@
 import requests
 import openai
 
-from pyrogram import ( filters, Cilent )
-from pyrogram.types ( InlineKeyboardButton, InlineKeyboardMarkup )
+from pyrogram import filters, Cilent
+from pyrogram.types InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import enums
 from pymongo import MongoClient 
 
