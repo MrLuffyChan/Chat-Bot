@@ -1,1 +1,1 @@
-worker: python3 -m aibot
+worker: python3 -m aichatbot
