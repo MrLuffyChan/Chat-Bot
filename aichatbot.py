@@ -10,7 +10,7 @@ from pymongo import MongoClient
 
 db = MongoClient("URL")["app"]["openAI"]
 
-API_ID = "" #int get from my.telegram.org
+API_ID = 12766057 #int get from my.telegram.org
 API_HASH = "" #string get from my.telegram.org
 TOKEN = "" #string get your robot token from @Botfather
 
