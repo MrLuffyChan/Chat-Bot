@@ -14,7 +14,7 @@ API_ID = 12345 #int get from my.telegram.org
 API_HASH = "" #string get from my.telegram.org
 TOKEN = "" #string get your robot token from @Botfather
 
-app = Cilent("openai",
+app = Client("openai",
 api_id=API_ID,
 api_hash=API_HASH,
 bot_token=TOKEN,
