@@ -135,7 +135,5 @@ async def AI_Reply(app, message):
                    await message.reply(f"{str(answer)}",quote=True)
                except Exception as e: return await message.reply("I could not answer this! Let talk about other topic!")
 
-
-
-app.run()
+print("Bot Start Successfully")
 
