@@ -2,3 +2,4 @@ pymongo
 requests
 openai
 pyrogram
+tgcrypto==1.2.2
