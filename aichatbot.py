@@ -10,7 +10,7 @@ from pymongo import MongoClient
 
 db = MongoClient("URL")["app"]["openAI"]
 
-API_ID = 12766057 #int get from my.telegram.org
+API_ID = 12345 #int get from my.telegram.org
 API_HASH = "" #string get from my.telegram.org
 TOKEN = "" #string get your robot token from @Botfather
 
@@ -134,8 +134,6 @@ async def AI_Reply(app, message):
                    session['chat_log'] = append_interaction_to_chat_log(Message, answer,chat_log)
                    await message.reply(f"{str(answer)}",quote=True)
                except Exception as e: return await message.reply("I could not answer this! Let talk about other topic!")
-
-
 
 
 
