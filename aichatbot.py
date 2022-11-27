@@ -137,3 +137,5 @@ async def AI_Reply(app, message):
 
 print("Bot Start Successfully")
 
+app.run()
+
