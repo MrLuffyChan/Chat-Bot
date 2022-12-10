@@ -1,5 +1,5 @@
-pymongo
+pymongo[src]
 requests
-openai
-pyrogram
-uvloop
+motor
+dnspython
+python-telegram-bot==13.11
