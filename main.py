@@ -36,7 +36,7 @@ def start(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
     keyb = []
-    keyb.append([InlineKeyboardButton(text="Add Me To Your Group", url=f"http://t.me/{context.bot.username}?startgroup=true")])
+    keyb.append([InlineKeyboardButton(text="➕ Add Me To Your Group ➕", url=f"http://t.me/{context.bot.username}?startgroup=true")])
     msg.reply_text(f"Hi\nI'm {context.bot.first_name}\nI can help you to active your Chat", reply_markup=InlineKeyboardMarkup(keyb))
 
 
@@ -61,17 +61,17 @@ def log_user(update: Update, context: CallbackContext):
        for x in is_chat:
            K.append(x['text'])
        if K:
-           hey = random.choice(K)
-           is_text = chatai.find_one({"chat":chat.id, "text": hey})
+           hi = random.choice(K)
+           is_text = chatai.find_one({"chat":chat.id, "text": hi})
            Yo = is_text['check']
        else:
            r = requests.get(f"http://api.brainshop.ai/get?bid={AI_BID}&uid={message.from_user.id}&key={AI_API_KEY}&msg={message.text}")
-           hey = r.json()["cnt"]
+           hi = r.json()["cnt"]
            Yo = None
        if Yo == "sticker": 
-           message.reply_sticker(f"{hey}")
+           message.reply_sticker(f"{hi}")
        if not Yo == "sticker":
-           message.reply_text(f"{hey}")
+           message.reply_text(f"{hi}")
    if message.reply_to_message:                   
        if message.reply_to_message.from_user.id == BOT_ID:                    
            K = []  
@@ -79,17 +79,17 @@ def log_user(update: Update, context: CallbackContext):
            for x in is_chat:
                K.append(x['text'])
            if K:
-               hey = random.choice(K)
-               is_text = chatai.find_one({"chat":chat.id, "text": hey})
+               hi = random.choice(K)
+               is_text = chatai.find_one({"chat":chat.id, "text": hi})
                Yo = is_text['check']
            else:
                r = requests.get(f"http://api.brainshop.ai/get?bid={AI_BID}&uid={message.from_user.id}&key={AI_API_KEY}&msg={message.text}")
-               hey = r.json()["cnt"]
+               hi = r.json()["cnt"]
                Yo = None
            if Yo == "sticker":
-               message.reply_sticker(f"{hey}")
+               message.reply_sticker(f"{hi}")
            if not Yo == "sticker":
-               message.reply_text(f"{hey}")
+               message.reply_text(f"{hi}")
        if not message.reply_to_message.from_user.id == BOT_ID:          
            if message.sticker:
                is_chat = chatai.find_one({"chat":chat.id, "word": message.reply_to_message.text, "id": message.sticker.file_unique_id})
@@ -110,5 +110,5 @@ USER_HANDLER = MessageHandler(
 dispatcher.add_handler(USER_HANDLER, USERS_GROUP)
 dispatcher.add_handler(START)
 
-print("INFO: BOTTING YOUR CLIENT")
+print("INFO: BOT START SUCCESSFULLY")
 updater.start_polling()
