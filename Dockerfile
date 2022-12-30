@@ -1,5 +1,5 @@
 FROM python:3.10.9
 
-WORKDIR main.py
+WORKDIR /root/ChatBot
 
-CMD ["python3","main.py"]
+CMD ["python3","ChatBot"]
