@@ -1,7 +1,5 @@
-RUN pip3 install -U pip
+FROM python:3.10.9
 
-COPY . .
-
-RUN pip3 install -U -r requirements.txt
+RUN pip install -U -r requirements.txt
 
 CMD ["python3","main.py"]
