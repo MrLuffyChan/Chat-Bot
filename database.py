@@ -1,4 +1,4 @@
-import mongodb
+from main import mongodb
 
 mongodb = db['chats']
 
