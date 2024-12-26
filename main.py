@@ -284,6 +284,7 @@ from aiohttp import web
 
 from main import serena
 
+import pyrogram
 import asyncio
 
 BIND_ADDRESS = "0.0.0.0"
@@ -299,10 +300,15 @@ async def start_services():
         asyncio.create_task(keep_alive())
         log.info("Keep Alive Service Started")
         log.info("=========== Initializing Web Server ===========")
+
+async def keep_online():
+     await serena.invoke(pyrogram.raw.functions.account.UpdateStatus(offline=False))
         
 
 if __name__ == "__main__":
      loop = asyncio.get_event_loop()
      loop.run_until_complete(start_services())
-     serena.start()
+     await keep_online()
+     await pyrogram.idle()
+     await serena.start()
      log.info('Bot Started!')
