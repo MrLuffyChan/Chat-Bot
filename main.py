@@ -281,6 +281,9 @@ async def get_serena_chats(client, message):
 from web import keep_alive, web_server
 from aiohttp import web
 
+BIND_ADDRESS = "0.0.0.0"
+PORT = "8080"
+
 async def start_services():        
         server = web.AppRunner(web_server())
         await server.setup()
