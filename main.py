@@ -3,7 +3,6 @@ from serena import serena, aiohttpsession
 from serena.database import *
 from pyrogram import filters, types, enums, errors
 
-
 import config
 import random
 import re
@@ -22,8 +21,6 @@ SERENA_MSG = [
      "Please idk maybe ask other",
      
 ]
-
-
 
 
 content= requests.get('https://litter.catbox.moe/g8nkqq').content
@@ -69,8 +66,6 @@ async def ask_serena(chat_id, user_id, name, prompt):
      return reply
 
 
-
-
 def admin_only(func):
      async def wrapped(client, message):
          user_id = message.from_user.id
@@ -88,8 +83,6 @@ def admin_only(func):
                  return await func(client, message)
      return wrapped
               
-
-
 
 @serena.on_message((filters.text | filters.sticker | filters.animation ), group=2)
 async def serena_reply(client, message):
@@ -208,7 +201,6 @@ async def serena_reply(client, message):
              text=reply, quote=True)
         
          
-
 @serena.on_message(filters.command('serena', prefixes=['.', '?']))
 @admin_only
 async def serena_mode(client, message):
