@@ -9,6 +9,31 @@ import re
 import requests
 import os
 
+import pyrogram
+import pymongo
+import logging
+import aiohttp
+
+
+aiohttpsession = aiohttp.ClientSession() # session
+
+FORMAT = f"[{config.name}] %(message)s"
+logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'),
+              logging.StreamHandler()], format=FORMAT)
+
+
+
+serena = pyrogram.Client(
+   name=config.name,
+   api_id=config.api_id,
+   api_hash=config.api_hash,
+   session_string=config.session
+)
+
+connect_db = pymongo.MongoClient(config.db_url)
+db = connect_db['SERENA']
+
+
 developers = 1666544436
 
 
@@ -251,3 +276,25 @@ async def get_serena_chats(client, message):
        await message.reply_document(
             document=serena_docs, thumb=serena_photo, quote=True)
        os.remove(path)
+
+
+from web import keep_alive, web_server
+from aiohttp import web
+
+async def start_services():        
+        server = web.AppRunner(web_server())
+        await server.setup()
+        await web.TCPSite(server, BIND_ADDRESS, PORT).start()
+        log.info("Web Server Initialized Successfully")
+        log.info("=========== Service Startup Complete ===========")
+  
+        asyncio.create_task(keep_alive())
+        log.info("Keep Alive Service Started")
+        log.info("=========== Initializing Web Server ===========")
+        
+
+if __name__ == "__main__":
+     loop = asyncio.get_event_loop()
+     loop.run_until_complete(start_services())
+     serena.run()
+     log.info('Bot Started!')
