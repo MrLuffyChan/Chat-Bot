@@ -1,1 +1,1 @@
-worker: python3 ChatBot
+worker: python3 -m main.py
