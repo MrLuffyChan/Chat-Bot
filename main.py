@@ -20,6 +20,8 @@ FORMAT = f"[{config.name}] %(message)s"
 logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'),
               logging.StreamHandler()], format=FORMAT)
 
+log = logging.getLogger(__name__)
+
 
 
 serena = pyrogram.Client(
