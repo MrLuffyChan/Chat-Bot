@@ -1,7 +1,12 @@
-from os import getenv
+import os
 
-BOT_TOKEN = getenv("BOT_TOKEN", "")
-MONGO_URL = getenv("MONGO_URL", "")
-BOT_ID = getenv("BOT_ID", "") #token first 10 digits
-AI_API_KEY = getenv("AI_API_KEY", "jK0lbt7oqgVXPgId") #Don't change this
-AI_ID = int(getenv("AI_ID", "170044")) #Don't change this
+name = 'Serena AI'
+serena_id = 2030938170
+api_id = os.getenv('API_ID', None)
+api_hash = os.getenv('API_HASH', None)
+session = os.getenv('SESSION', None)
+password = os.getenv('password', None)
+username = os.getenv('username', None)
+db_url = os.getenv('DB_URL', None)
+chatbot_url = os.getenv('CHATBOT', None)
+char_id = "UkuPaK3" #this is serena is character id [ https://www.sakura.fm]
