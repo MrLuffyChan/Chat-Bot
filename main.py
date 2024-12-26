@@ -1,5 +1,4 @@
 from sakura import Client
-from serena import aiohttpsession
 from serena.database import *
 from pyrogram import filters, types, enums, errors
 
