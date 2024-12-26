@@ -1,4 +1,4 @@
-from serena import db
+import db
 
 db = db['chats']
 
