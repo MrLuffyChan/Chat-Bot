@@ -1,6 +1,6 @@
 from main import mongodb
 
-mongodb = db['chats']
+db = mongodb['chats']
 
 def set_chat_mode(chat_id: int, chatname, mode):
      chat = {'chat_id': chat_id}
