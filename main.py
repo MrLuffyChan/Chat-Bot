@@ -303,12 +303,14 @@ async def start_services():
 
 async def keep_online():
      await serena.invoke(pyrogram.raw.functions.account.UpdateStatus(offline=False))
+
+async def client():
+      await serena.start()
+      await keep_online()
+      await pyrogram.idle()
         
 
 if __name__ == "__main__":
      loop = asyncio.get_event_loop()
      loop.run_until_complete(start_services())
-     await keep_online()
-     await pyrogram.idle()
-     await serena.start()
      log.info('Bot Started!')
