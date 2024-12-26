@@ -1,7 +1,8 @@
-pymongo[src]
-requests
-motor
-dnspython
-python-telegram-bot==20.0
-aiohttp==3.8.1
+https://github.com/KurimuzonAkuma/pyrogram/archive/dev.zip
+tgcrypto==1.2.5
+aiohttp==3.9.5
+requests==2.31.0
+sakura-fm==0.0.9
+asyncio==3.4.3
+pymongo==4.3.3
 
