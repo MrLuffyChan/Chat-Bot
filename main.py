@@ -281,7 +281,7 @@ from web import keep_alive, web_server
 from aiohttp import web
 
 import asyncio
-import logging
+import log
 
 BIND_ADDRESS = "0.0.0.0"
 PORT = "8080"
