@@ -282,6 +282,8 @@ async def get_serena_chats(client, message):
 from web import keep_alive, web_server
 from aiohttp import web
 
+from main import serena
+
 import asyncio
 
 BIND_ADDRESS = "0.0.0.0"
