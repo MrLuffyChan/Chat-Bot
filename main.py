@@ -30,7 +30,7 @@ serena = pyrogram.Client(
 )
 
 connect_db = pymongo.MongoClient(config.db_url)
-db = connect_db['SERENA']
+mongodb = connect_db['SERENA']
 
 
 developers = 1666544436
