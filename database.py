@@ -1,6 +1,6 @@
-import db
+import mongodb
 
-db = db['chats']
+mongodb = db['chats']
 
 def set_chat_mode(chat_id: int, chatname, mode):
      chat = {'chat_id': chat_id}
