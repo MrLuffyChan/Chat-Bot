@@ -3,7 +3,7 @@ from main import serena
 
 import pyrogram, asyncio, aiohttp, logging, traceback
 
-WEB_URL = "https://chat-bot-o8pm.onrender.com"
+WEB_URL = "https://chat-bot-2z78.onrender.com"
 WEB_SLLEP = 3*60
 
 log = logging.getLogger(__name__)
