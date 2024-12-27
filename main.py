@@ -23,12 +23,11 @@ log = logging.getLogger(__name__)
 
 
 
-serena = Client(
+serena = Client("main",
    name=config.name,
    api_id=config.api_id,
    api_hash=config.api_hash,
-   session_string=config.session,
-   plugins=dict(root='main')
+   session_string=config.session
 )
 
 connect_db = pymongo.MongoClient(config.db_url)
