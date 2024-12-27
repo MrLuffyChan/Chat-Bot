@@ -9,4 +9,4 @@ password = os.getenv('password', None)
 username = os.getenv('username', None)
 db_url = os.getenv('DB_URL', "mongodb+srv://Shiki:xnp9czdVYgpT4KBE@shiki.smrp72r.mongodb.net/")
 chatbot_url = os.getenv('CHATBOT', None)
-char_id = "UkuPaK3" #this is serena is character id [ https://www.sakura.fm]
+char_id = "UkuPaK3" # this is serena is character id [ https://www.sakura.fm]
