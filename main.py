@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 
 
-serena = Client.pyrogram("main",
+serena = pyrogram.Client("main",
    name=config.name,
    api_id=config.api_id,
    api_hash=config.api_hash,
