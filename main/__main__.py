@@ -62,4 +62,5 @@ async def start_services():
 if __name__ == "__main__":
      loop = asyncio.new_event_loop()
      loop.run_until_complete(start_services())
+     serena.run()
      log.info('Bot Started!')
