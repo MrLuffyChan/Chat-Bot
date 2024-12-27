@@ -29,8 +29,6 @@ async def keep_alive():
             try:
                 async with aiohttp.ClientSession(
                     timeout=aiohttp.ClientTimeout(total=10)
-                ) as session:
-                    async with session.get(WEB_URL) as resp:
                         log.info(
                             "Pinged {} with response: {}".format(
                                 WEB_URL, resp.status
