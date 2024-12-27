@@ -26,14 +26,18 @@ def web_server():
 
 async def keep_alive():
     if WEB_URL:
+        while True:
+            await asyncio.sleep(WEB_SLLEP)
             try:
                 async with aiohttp.ClientSession(
+                    timeout=aiohttp.ClientTimeout(total=10)
+                ) as session:
+                    async with session.get(WEB_URL) as resp:
                         log.info(
                             "Pinged {} with response: {}".format(
                                 WEB_URL, resp.status
                             )
                         )
-                    )
             except asyncio.TimeoutError:
                 log.warning("Couldn't connect to the site URL..!")
             except Exception:
@@ -58,5 +62,4 @@ async def start_services():
 if __name__ == "__main__":
      loop = asyncio.new_event_loop()
      loop.run_until_complete(start_services())
-     serena.run()
      log.info('Bot Started!')
