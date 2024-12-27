@@ -1,5 +1,5 @@
 
-WEB_URL = "https://chat-bot-1k3p.onrender.com"
+WEB_URL = "https://chat-bot-o8pm.onrender.com"
 WEB_SLLEP = 3*60
 
 
