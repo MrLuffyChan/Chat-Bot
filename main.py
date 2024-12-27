@@ -8,6 +8,7 @@ import re
 import requests
 import os
 
+import pyrogram
 import pymongo
 import logging
 import aiohttp
@@ -23,7 +24,7 @@ log = logging.getLogger(__name__)
 
 
 
-serena = Client("main",
+serena = Client.pyrogram("main",
    name=config.name,
    api_id=config.api_id,
    api_hash=config.api_hash,
