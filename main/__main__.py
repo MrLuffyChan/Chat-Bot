@@ -26,8 +26,6 @@ def web_server():
 
 async def keep_alive():
     if WEB_URL:
-        while True:
-            await asyncio.sleep(WEB_SLLEP)
             try:
                 async with aiohttp.ClientSession(
                     timeout=aiohttp.ClientTimeout(total=10)
