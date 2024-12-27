@@ -29,7 +29,7 @@ with open(serena_photo, 'wb') as f:
      f.write(content)
 
 
-Serena= Client(
+Serena = Client(
     username = config.username,
     password = config.password,
     mongo = config.db_url
