@@ -26,7 +26,8 @@ def web_server():
 
 async def keep_alive():
     if WEB_URL:
-        await asyncio.sleep(WEB_SLLEP)
+        while True:
+            await asyncio.sleep(WEB_SLLEP)
             try:
                 async with aiohttp.ClientSession(
                     timeout=aiohttp.ClientTimeout(total=10)
@@ -56,14 +57,6 @@ async def start_services():
         asyncio.create_task(keep_alive())
         log.info("Keep Alive Service Started")
         log.info("=========== Initializing Web Server ===========")
-
-async def keep_online():
-     await serena.invoke(pyrogram.raw.functions.account.UpdateStatus(offline=False))
-
-async def client():
-      await serena.start()
-      await keep_online()
-      await pyrogram.idle()
         
 
 if __name__ == "__main__":
