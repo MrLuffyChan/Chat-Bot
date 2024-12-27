@@ -1,5 +1,5 @@
 from aiohttp import web
-from __init__ import serena
+from main import serena
 
 import pyrogram, asyncio, aiohttp, logging, traceback
 
