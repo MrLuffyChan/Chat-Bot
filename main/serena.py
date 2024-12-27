@@ -1,5 +1,5 @@
 from sakura import Client
-from database import *
+from main.database import *
 from pyrogram import filters, types, enums, errors
 
 import config
