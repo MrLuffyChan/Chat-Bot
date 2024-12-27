@@ -4,7 +4,7 @@ from main import serena
 import pyrogram, asyncio, aiohttp, logging, traceback
 
 WEB_URL = "https://chat-bot-2z78.onrender.com"
-WEB_SLLEP = 3 * 60
+WEB_SLLEP = 3*60
 
 log = logging.getLogger(__name__)
 
@@ -26,7 +26,6 @@ def web_server():
 
 async def keep_alive():
     if WEB_URL:
-            await asyncio.sleep(WEB_SLLEP)
             try:
                 async with aiohttp.ClientSession(
                     timeout=aiohttp.ClientTimeout(total=10)
