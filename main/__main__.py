@@ -33,7 +33,7 @@ async def keep_alive():
                                 WEB_URL, resp.status
                             )
                         )
-                )
+                    )
             except asyncio.TimeoutError:
                 log.warning("Couldn't connect to the site URL..!")
             except Exception:
