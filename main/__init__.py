@@ -24,7 +24,7 @@ serena = Client(
    api_id=api_id,
    api_hash=api_hash,
    session=session,
-   plugins=dict(root='main')
+   plugins=dict(root='main'),
 )
 
 connect_db = pymongo.MongoClient(config.db_url)
