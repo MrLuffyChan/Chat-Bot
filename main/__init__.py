@@ -20,7 +20,6 @@ session = os.getenv("SESSION")
 
 
 serena = Client(name="serena",
-   name=config.name,
    api_id=api_id,
    api_hash=api_hash,
    session=session,
