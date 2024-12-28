@@ -45,7 +45,7 @@ async def keep_alive():
                     
 
 BIND_ADDRESS = "0.0.0.0"
-PORT = "9090"
+PORT = 8080
 
 async def start_services():        
         server = web.AppRunner(web_server())
@@ -60,7 +60,7 @@ async def start_services():
         
 
 if __name__ == "__main__":
-     loop = asyncio.new_event_loop()
+     loop = asyncio.get_event_loop()
      loop.run_until_complete(start_services())
      serena.run()
      log.info('Bot Started!')
