@@ -1,4 +1,4 @@
-from serena import mongodb
+from main import mongodb
 
 db = mongodb['chats']
 
