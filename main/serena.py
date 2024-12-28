@@ -1,3 +1,4 @@
+from main import serena
 from sakura import Client
 from main.database import *
 from pyrogram import filters, types, enums, errors
