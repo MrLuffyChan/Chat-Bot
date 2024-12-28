@@ -1,5 +1,6 @@
 import os
 import config
+import pyrogram
 import pymongo
 import logging
 import aiohttp
@@ -19,7 +20,7 @@ api_hash = os.getenv("API_HASH")
 session = os.getenv("SESSION")
 
 
-serena = Client(name="serena",
+serena = pyrogram.Client("serena",
    api_id=api_id,
    api_hash=api_hash,
    session=session,
