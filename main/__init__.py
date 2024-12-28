@@ -22,7 +22,7 @@ string_session = os.getenv("session")
 serena = Client("serena",
           api_id=api_id,
           api_hash=api_hash,
-          string_session=session,
+          string_session=string_session,
           plugins=dict(root='main'), )
 
 
