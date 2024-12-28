@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'
 
 api_id = os.getenv("api_id")
 api_hash = os.getenv("api_hash")
-string_session = os.getenv("session")
+string_session = os.getenv("string_session")
 
 
 serena = Client("serena",
