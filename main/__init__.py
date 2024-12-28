@@ -12,6 +12,10 @@ logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'
               logging.StreamHandler()], format=FORMAT)
 
 
+api_id = os.getenv("API_ID")
+api_hash = os.getenv("API_HASH")
+session = os.getenv("SESSION")
+
 
 serena = pyrogram.Client(
    name=config.name,
