@@ -19,7 +19,7 @@ api_hash = os.getenv("API_HASH")
 session = os.getenv("SESSION")
 
 
-serena = Client(
+serena = Client("main",
    name=config.name,
    api_id=api_id,
    api_hash=api_hash,
