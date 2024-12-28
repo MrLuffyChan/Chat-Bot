@@ -32,6 +32,7 @@ with open(serena_photo, 'wb') as f:
 
 Serena= Client(
     username = config.username,
+    password = config.password,
     mongo = config.db_url
 )
      
