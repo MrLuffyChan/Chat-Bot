@@ -19,7 +19,7 @@ api_hash = os.getenv("api_hash")
 string = os.getenv("string")
 
 
-serena = Client("serena",
+serena = Client(string="serena",
           api_id=api_id,
           api_hash=api_hash,
           string=string,
