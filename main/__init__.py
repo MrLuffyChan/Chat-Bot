@@ -1,6 +1,5 @@
 import os
 import config
-import pyrogram
 import pymongo
 import logging
 import aiohttp
@@ -20,12 +19,11 @@ api_hash = os.getenv("API_HASH")
 session = os.getenv("SESSION")
 
 
-serena = pyrogram.Client("serena",
-   api_id=api_id,
-   api_hash=api_hash,
-   session=session,
-   plugins=dict(root='main'),
-)
+serena = Client("serena",
+            api_id=api_id,
+            api_hash=api_hash,
+            session=session,
+            plugins=dict(root='main'), )
 
 connect_db = pymongo.MongoClient(config.db_url)
 mongodb = connect_db['SERENA']
