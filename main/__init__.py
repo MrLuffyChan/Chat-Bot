@@ -14,15 +14,15 @@ logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'
               logging.StreamHandler()], format=FORMAT)
 
 
-api_id = os.getenv("API_ID")
-api_hash = os.getenv("API_HASH")
-session = os.getenv("SESSION")
+api_id = os.getenv("api_id")
+api_hash = os.getenv("api_hash")
+string_session = os.getenv("session")
 
 
 serena = Client("serena",
           api_id=api_id,
           api_hash=api_hash,
-          session=session,
+          string_session=session,
           plugins=dict(root='main'), )
 
 
