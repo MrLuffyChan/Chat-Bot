@@ -50,7 +50,7 @@ async def serena_react(message):
 
 async def ask_serena(chat_id, user_id, name, prompt):
      try:
-        response = serena.sendMessage(
+        response = await serena.sendMessage(
              user_id, config.char_id, prompt
         )
         reply = response['reply']
